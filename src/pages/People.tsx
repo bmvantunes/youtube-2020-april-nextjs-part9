@@ -8,9 +8,9 @@ export interface PeopleProps {
 export default function People({ names }: PeopleProps) {
   return (
     <div>
-        <Link href="/">
-            <a>Index</a>
-        </Link>
+      <Link href="/">
+        <a>Index</a>
+      </Link>
       {names.map((name) => {
         return <h2 key={name}>{name}</h2>;
       })}
@@ -21,5 +21,5 @@ export default function People({ names }: PeopleProps) {
 export const getServerSideProps: GetServerSideProps<PeopleProps> = async (
   ctx
 ) => {
-  return { props: { names: ['john', 'michael', 'bruno'] } };
+  return { props: { names: ['john', 'doe', 'michael', 'bruno'] } };
 };
